@@ -12,6 +12,8 @@ var productsRouter = require('./routes/products');
 
 var app = express();
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 var dbUri = "mongodb+srv://user:kQbt1tKm3WF3Q5IH@cluster0.avq1wtv.mongodb.net/e-commerce"
 mongoose.connect(dbUri)
 .then((result) => {
